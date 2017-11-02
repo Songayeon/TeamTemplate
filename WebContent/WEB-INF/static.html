@@ -1,0 +1,32 @@
+<!-- 
+경고: No mapping found for HTTP request with URI [/myspring_day04/resource/html/static.html] in DispatcherServlet with name 'dispatcher'
+11월 02, 2017 4:46:59 오후 org.springframework.web.servlet.DispatcherServlet noHandlerFound
+→ 스프링에서 요청에 대해 가로채는데 관련 Controller 없음 → 정적 요소는 스프링이 아닌 톰캣이 처리 하도록 처리 해야 함!!
+
+* : 모든 파일
+** : 모든 폴더 및 파일
+
+스프링이 처리하지 못하는 요청 톰켓에게 위임 ac.xml에 등록
+정적 요소 톰캣에게 위임 방법 1. 정부 표준안 공시, 가장 알려진 방법 - 폴더 단위로 사용시,
+	<mvc:annotation-driven/>
+	<mvc:resources location="/resources/" mapping="/resources/**" />
+	
+	
+정적 요소 톰캣에게 위임 방법 2. 
+	<mvc:annotation-driven/>
+	<mvc:default-servlet-handler/>
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 정적 HTML 파일 </title>
+
+<script type="text/javascript" src="script.js"></script>
+
+</head>
+<body>
+
+	정적 HTML 파일
+</body>
+</html>

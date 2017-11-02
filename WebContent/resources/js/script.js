@@ -1,0 +1,8 @@
+/**
+ *	script.js 
+ */
+
+
+function chk() {
+	
+}
